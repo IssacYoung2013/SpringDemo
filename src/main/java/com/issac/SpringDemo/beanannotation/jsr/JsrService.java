@@ -2,6 +2,8 @@ package com.issac.SpringDemo.beanannotation.jsr;
 
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  *
  * author:  ywy
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class JsrService {
 
+    @Resource
     private JsrDAO jsrDAO;
 
     public void save() {
