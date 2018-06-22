@@ -1,5 +1,7 @@
 package com.issac.SpringDemo.aop.schema.advice;
 
+import org.aspectj.lang.ProceedingJoinPoint;
+
 /**
  *
  * author:  ywy
@@ -18,5 +20,21 @@ public class MoocAspect {
     
     public void after() {
         System.out.println("MoocAspect after");
+    }
+
+    public void afterThrowing() {
+        System.out.println("MoocAspect afterThrowing");
+    }
+
+    public Object around(ProceedingJoinPoint pip) {
+        Object obj = null;
+        try {
+            System.out.println("MoocAspect around");
+            obj = pip.proceed();
+        }
+        catch (Throwable e) {
+            e.printStackTrace();
+        }
+        return obj;
     }
 }

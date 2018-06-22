@@ -18,7 +18,9 @@
                         <aop:pointcut id="moocPointCut" expression="execution(* com.issac.SpringDemo.aop.schema.advice.biz.*Biz.*(..))"></aop:pointcut>
                         <aop:before method="before" pointcut-ref="moocPointCut"></aop:before>
                         <aop:after-returning method="afterReturning" pointcut-ref="moocPointCut" ></aop:after-returning>
+                        <aop:after-throwing method="afterThrowing" pointcut-ref="moocPointCut"></aop:after-throwing>
                         <aop:after method="after" pointcut-ref="moocPointCut"></aop:after>
+                        <aop:around method="around" pointcut-ref="moocPointCut"></aop:around>
                 </aop:aspect>
         </aop:config>
 
