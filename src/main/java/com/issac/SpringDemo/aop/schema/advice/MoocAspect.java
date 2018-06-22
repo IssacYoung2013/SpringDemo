@@ -15,4 +15,8 @@ public class MoocAspect {
     public void afterReturning() {
         System.out.println("MoocAspect afterReturning");
     }
+    
+    public void after() {
+        System.out.println("MoocAspect after");
+    }
 }
