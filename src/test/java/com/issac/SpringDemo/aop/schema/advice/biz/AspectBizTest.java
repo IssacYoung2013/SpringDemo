@@ -1,5 +1,6 @@
 package com.issac.SpringDemo.aop.schema.advice.biz;
 
+import com.issac.SpringDemo.aop.schema.advice.Fit;
 import com.issac.SpringDemo.base.UnitTestBase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +25,12 @@ public class AspectBizTest extends UnitTestBase{
     @Test
     public void testBiz() {
         AspectBiz aspectBiz= super.getBean("aspectBiz");
-        aspectBiz.biz();
+        aspectBiz.init("moocService",3);
+    }
+
+    @Test
+    public void testFit() {
+        Fit fit = (Fit)super.getBean("aspectBiz");
+        fit.filter();
     }
 }
